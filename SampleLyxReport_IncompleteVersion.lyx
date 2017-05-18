@@ -1,0 +1,855 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{dpfloat}
+\usepackage{xcolor}
+\usepackage{lastpage}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{notoccite}	%This is to ignore citations in toc, lof and lot when ordering the references
+\usepackage{listings}
+
+%\allowdisplaybreaks
+
+%Format of the code listing caption
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\linewidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+
+
+%\TOCLanguage{english}
+
+%Redefine the plain page style which was destroyed by the arabi package to obtain roman page numbers for the front matter
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+%For arabic page numbers
+\fancypagestyle{ArabicPlain}{%
+\fancyhf{} % clear all header and footer fields
+\cfoot{\I{\thepage}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\newcommand*{\blankpage}{%
+  \begin{otherlanguage}{english}
+    \vspace*{\fill}
+%    \hfill
+    \begin{center}
+      \emph{This page intentionally left blank!}
+    \end{center}
+    \vspace{\fill}
+%    \thispagestyle{empty}
+  \end{otherlanguage}
+  \clearpage
+}
+
+
+\makeatletter
+\renewcommand*\cleardoublepage{\clearpage%
+    \if@twoside
+        \ifodd\c@page\else
+        \blankpage
+        \fi
+    \fi
+}
+\makeatother
+
+%Solve a bug of not displaying \times symbol when writing arabic
+\DeclareRobustCommand{\timesr}{\fontfamily{artimes}\selectfont}
+\let\times\relax
+\DeclareMathSymbol{\times}{\mathbin}{symbols}{"02}
+
+%Solve a bug of not displaying \omega symbol when writing arabic
+\DeclareRobustCommand{\omegar}{\fontfamily{aromega}\selectfont}
+\let\omega\relax
+\DeclareMathSymbol{\omega}{\mathord}{letters}{"21}
+
+\let\mySection\section\renewcommand{\section}{\suppressfloats[t]\mySection}
+
+\let\mySubSection\subsection\renewcommand{\subsection}{\suppressfloats[t]\mySubSection}
+
+%To organize the nomenclature in two columns
+\renewcommand*\nompreamble{
+\setlength{\columnsep}{15mm}
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}
+}
+\renewcommand*\nompostamble{\end{multicols}}
+\end_preamble
+\options openright,intoc,bibliography=totoc,refpage
+\use_default_options true
+\begin_modules
+customHeadersFooters
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding default
+\font_roman "tgtermes" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=blue,anchorcolor=blue,filecolor=blue,menucolor=blue,runcolor=blue,urlcolor=blue,citecolor=blue,pdfpagelayout=TwoPageRight,pdfstartview=Fit"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 3.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\headheight 3cm
+\headsep 0cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\listings_params "breaklines=true,numbers=left,commentstyle={\color[rgb]{0,0.5,0}},keywordstyle={\color{blue}},stringstyle={\color{magenta}},tabsize=4,basicstyle={\ttfamily},columns=fullflexible"
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+headrulewidth}{0.4pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Left Header
+Cairo University
+\begin_inset Newline newline
+\end_inset
+
+Faculty of Engineering
+\begin_inset Newline newline
+\end_inset
+
+Aerospace Engineering Dept.
+\end_layout
+
+\begin_layout Center Header
+\begin_inset Graphics
+	filename AerospaceDeptLogo.jpg
+	width 3.5cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Right Header
+Report (6)
+\begin_inset Newline newline
+\end_inset
+
+AER 123; Gas Dynamics
+\begin_inset Newline newline
+\end_inset
+
+B.Sc.
+ 2nd.
+ Year, 2014/2015
+\end_layout
+
+\begin_layout Center Footer
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Necessary not to print page numbers in this page
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\size largest
+Report 6: 
+\size giant
+Oblique Shock Wave
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Submitted to:
+\end_layout
+
+\begin_layout Standard
+
+\size large
+Prof.
+ First Second
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+By:
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0ex"
+width "100col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\size large
+\begin_inset space ~
+\end_inset
+
+
+\lang arabic_arabi
+أحمد محمد محمود
+\lang english
+
+\begin_inset space \hfill{}
+\end_inset
+
+Sec.
+ 1, B.N.: 30
+\end_layout
+
+\begin_layout Enumerate
+
+\size large
+Name Name
+\begin_inset space \hfill{}
+\end_inset
+
+Sec.
+ 2, B.N.: 31
+\end_layout
+
+\begin_layout Enumerate
+
+\size large
+Name Name
+\begin_inset space \hfill{}
+\end_inset
+
+Sec.
+ 1, B.N.: 37
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+afterpage{
+\backslash
+thispagestyle{empty}}     %This is to clear the headers and footers of the
+ following page
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{roman}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{plain}     %To use roman nmbering
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section*
+Contents
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+contentsname}{Contents}
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\backslash
+addcontentsline{toc}{section}{
+\backslash
+contentsname}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pdfbookmark[1]{
+\backslash
+contentsname}{toc}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section*
+Nomenclature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "auto"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage cleardoublepage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagenumbering{arabic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Center Footer
+page 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+thepage 
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ of 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+pageref{LastPage}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%To force breaking long URL's
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+sloppy
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Problem Statement
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Complete here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Appendices
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Matlab Codes
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+lstlistingname}{Code} 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "Report6_main.m"
+lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xrightmargin={-\\fboxsep},caption={Report6\\_main.m},label={Main_script}"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size small
+\begin_inset listings
+lstparams "numbers=left,numberstyle={\footnotesize},breaklines=true,showstringspaces=false,tabsize=4,language=Matlab,frame=rBL,frameround=fttt,numbers=left,numberstyle={\footnotesize},xleftmargin={\fboxsep},xrightmargin={-\fboxsep}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "M_2o_fun"
+
+\end_inset
+
+function M
+\backslash
+_2o.m
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+function M_2_vec=M_2o(M_1,theta_d_vec, ...
+\end_layout
+
+\begin_layout Plain Layout
+
+                      gamma)    %optional arguments
+\end_layout
+
+\begin_layout Plain Layout
+
+if nargin<3
+\end_layout
+
+\begin_layout Plain Layout
+
+    gamma=1.4;
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+theta_vec=deg2rad(theta_d_vec);
+\end_layout
+
+\begin_layout Plain Layout
+
+n1=sqrt((gamma+1)/(gamma-1))*atan(sqrt((gamma-1)/(gamma+1)*(M_1^2-1)))-atan(sqrt
+(M_1^2-1));
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+%Newton Raphson iteration
+\end_layout
+
+\begin_layout Plain Layout
+
+M_2_vec=1.1*ones(size(theta_d_vec));
+\end_layout
+
+\begin_layout Plain Layout
+
+for ii=1:length(theta_d_vec)
+\end_layout
+
+\begin_layout Plain Layout
+
+    f=sqrt((gamma+1)/(gamma-1))*atan(sqrt((gamma-1)/(gamma+1)*(M_2_vec(ii)^2-1))
+)-atan(sqrt(M_2_vec(ii)^2-1))-theta_vec(ii)-n1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    fdash=1/(M_2_vec(ii)^2-1)^(1/2)*M_2_vec(ii)/(1+(gamma-1)/(gamma+1)*(M_2_vec(
+ii)^2-1))-1/(M_2_vec(ii)^2-1)^(1/2)/M_2_vec(ii);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+    M_2_n=M_2_vec(ii)-f/fdash;
+\end_layout
+
+\begin_layout Plain Layout
+
+    while abs(M_2_vec(ii)-M_2_n)>=100*eps %This is dangerous.
+ Infinte loop can occur!!
+\end_layout
+
+\begin_layout Plain Layout
+
+        M_2_vec(ii)=M_2_n;
+\end_layout
+
+\begin_layout Plain Layout
+
+        f=sqrt((gamma+1)/(gamma-1))*atan(sqrt((gamma-1)/(gamma+1)*(M_2_vec(ii)^2
+-1)))-atan(sqrt(M_2_vec(ii)^2-1))-theta_vec(ii)-n1;
+\end_layout
+
+\begin_layout Plain Layout
+
+        fdash=1/(M_2_vec(ii)^2-1)^(1/2)*M_2_vec(ii)/(1+(gamma-1)/(gamma+1)*(M_2_
+vec(ii)^2-1))-1/(M_2_vec(ii)^2-1)^(1/2)/M_2_vec(ii);
+\end_layout
+
+\begin_layout Plain Layout
+
+        M_2_n=M_2_vec(ii)-f./fdash;
+\end_layout
+
+\begin_layout Plain Layout
+
+    end
+\end_layout
+
+\begin_layout Plain Layout
+
+    M_2_vec(ii)=M_2_n;
+\end_layout
+
+\begin_layout Plain Layout
+
+end
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section*
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+refname}{References}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+phantomsection
+\backslash
+addcontentsline{toc}{section}{
+\backslash
+refname}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+J.
+ D.
+ Anderson, Modern Compressible Flow, McGraw-Hill, New York, 1990.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Complete here
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
