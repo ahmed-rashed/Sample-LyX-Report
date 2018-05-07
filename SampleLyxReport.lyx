@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -110,6 +110,8 @@ multicol
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -149,6 +151,7 @@ multicol
 \suppress_date true
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -163,7 +166,10 @@ multicol
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle fancy
@@ -580,6 +586,7 @@ The most general governing equation is N.S.
 LatexCommand nomenclature
 symbol "N.S."
 description "Navier Stockes"
+literal "true"
 
 \end_inset
 
@@ -591,6 +598,7 @@ description "Navier Stockes"
 LatexCommand nomenclature
 symbol "w.r.t."
 description "with respect to"
+literal "true"
 
 \end_inset
 
@@ -806,30 +814,6 @@ reference "subsec:Results"
 \end_inset
 
 .
- 
-\begin_inset CommandInset ref
-LatexCommand nameref
-reference "lis:function-export_figure"
-
-\end_inset
-
- [code 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "lis:function-export_figure"
-
-\end_inset
-
-] is just for exporting the figure to a pdf or emf to be included in section
- 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "subsec:Results"
-
-\end_inset
-
-.
- Therefore this code is not complete.
 \end_layout
 
 \begin_layout Standard
@@ -1207,6 +1191,7 @@ Pressure, temperature & density increases as the kinetic energy increase
 \begin_inset CommandInset citation
 LatexCommand cite
 key "key-1"
+literal "true"
 
 \end_inset
 
@@ -1277,9 +1262,7 @@ name "M_2o_fun"
 
 \end_inset
 
-function M
-\backslash
-_2o.m
+function M_2o.m
 \end_layout
 
 \end_inset
@@ -1468,6 +1451,7 @@ refname}
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-1"
+literal "true"
 
 \end_inset
 
@@ -1480,6 +1464,7 @@ J.
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-2"
+literal "true"
 
 \end_inset
 
@@ -1490,6 +1475,7 @@ Report (1).
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-3"
+literal "true"
 
 \end_inset
 
