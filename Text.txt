@@ -1,0 +1,24 @@
+Problem Statement
+Produce charts that describe the change of supersonic flow properties when it turned away from itself.
+Mathematical Model
+The most general governing equation is N.S. equation. This is any dummy text just to show the capabilities of nomenclatures of LyX w.r.t. LaTeX.
+Assumptions
+Steady Flow
+Analysis
+We can derive the formula that governs super flow expansion as:
+Working Procedure:
+If you know M_{1} & \theta know you can use equation ([eq:nu]) to solve for M_{2} using Newton Raphson iteration scheme as described below:
+After you get M_{2} you can get the pressure and temperature using the isentropic relations:
+[M_2o_fun] [code [M_2o_fun]] illustrates this procedure. [Main_script] [code [Main_script]] was used to plot the figures shown in section [subsec:Results].
+This is a line with some Arabic words هذا هو بعض الكلمات العربية فى سطر انجليزى.
+و هذا سطر عربى به بعض الكلمات الانجليزية.Thus is some English words in an Arabic line.
+و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب.  و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب. و بناءً عليه فقد تم اثبات المطلوب.
+Results
+The following table is just for demonstration. It doesn't provide any useful information.
+We see that we can still obtain solutions for M_{2} for \theta>90^{\circ}. But, however I think the solutions for \theta>90^{\circ} aren't practical.
+Pressure, temperature & density increases as the kinetic energy increase as in [1].
+Appendices
+A Matlab Codes
+J. D. Anderson, Modern Compressible Flow, McGraw-Hill, New York, 1990.
+References Report (1).
+References Report (3).
