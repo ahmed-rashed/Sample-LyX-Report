@@ -586,7 +586,7 @@ The most general governing equation is N.S.
 LatexCommand nomenclature
 symbol "N.S."
 description "Navier Stockes"
-literal "true"
+literal "false"
 
 \end_inset
 
@@ -606,7 +606,7 @@ literal "true"
 .
 \begin_inset Formula 
 \begin{flalign}
-\mu & =\sin^{-1}(\frac{1}{M})\\
+\mu & =\sin^{-1}\left(\frac{1}{M}\right)\\
 \left(\frac{a_{0}}{a}\right)^{2} & =1+\frac{\gamma-1}{2}M^{2}
 \end{flalign}
 
@@ -715,7 +715,7 @@ We can derive the formula that governs super flow expansion as:
 \end_layout
 
 \begin_layout Subsection
-Working Procedure:
+Working Procedure
 \end_layout
 
 \begin_layout Standard
