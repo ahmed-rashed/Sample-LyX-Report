@@ -22,7 +22,7 @@ for ii=1:length(yAxesTitles_tex)
 end
 xlabel('$\theta$ (degrees)','interpreter','latex'); %This applies to the bottom subplot
 
-M_1_legend_tex=cell(length(M_1_vec),1);
+M_1_legend_tex=strings(length(M_1_vec),1);
 ii=1;
 for M_1=M_1_vec
     M_2=M_2o(M_1,theta_d_vec,gamma);
@@ -37,7 +37,7 @@ for M_1=M_1_vec
     rho_2_rho_1=T_2_T_1.^(1/(gamma-1));
     subplot(4,1,4);plot(theta_d_vec,rho_2_rho_1);
     
-    M_1_legend_tex{ii}=['$M=',num2str(M_1),'$'];
+    M_1_legend_tex(ii)="$M="+M_1+'$';
     
     ii=ii+1;
 end
