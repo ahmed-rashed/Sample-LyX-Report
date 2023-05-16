@@ -1,5 +1,5 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
@@ -88,6 +88,12 @@
 \begin{multicols}{2}
 }
 \renewcommand*\nompostamble{\end{multicols}}
+
+\lstdefinelanguage{myMatlab}{
+  language     = Matlab,
+  morekeywords = {inf,Inf,nan,NaN,true,false,warning,error,groot,clearvars,switch,case,otherwise,continue,classdef,handle,Abstract,AllowedSubclasses,Hidden,Sealed,properties,methods,Access,SetAccess,GetAccess,protected,private},
+  morestring=**[d]{"}
+}
 \end_preamble
 \options openright,intoc,bibliography=totoc,refpage
 \use_default_options true
@@ -110,6 +116,8 @@ multicol
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -149,6 +157,7 @@ multicol
 \suppress_date true
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -163,7 +172,10 @@ multicol
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 2
 \paperpagestyle fancy
@@ -616,7 +628,7 @@ lstlistingname}{Code}
 \begin_inset CommandInset include
 LatexCommand lstinputlisting
 filename "Report6_main.m"
-lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xrightmargin={-\\fboxsep},caption={Report6\\_main.m},label={Main_script}"
+lstparams "language=myMatlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xrightmargin={-\\fboxsep},caption={Report6\\_main.m},label={Main_script}"
 
 \end_inset
 
@@ -627,7 +639,7 @@ lstparams "language=Matlab,frame=rBL,frameround=fttt,xleftmargin={\\fboxsep},xri
 
 \size small
 \begin_inset listings
-lstparams "numbers=left,numberstyle={\footnotesize},breaklines=true,showstringspaces=false,tabsize=4,language=Matlab,frame=rBL,frameround=fttt,numbers=left,numberstyle={\footnotesize},xleftmargin={\fboxsep},xrightmargin={-\fboxsep}"
+lstparams "numbers=left,numberstyle={\footnotesize},breaklines=true,showstringspaces=false,tabsize=4,language=myMatlab,frame=rBL,frameround=fttt,numbers=left,numberstyle={\footnotesize},xleftmargin={\fboxsep},xrightmargin={-\fboxsep}"
 inline false
 status open
 
@@ -833,6 +845,7 @@ refname}
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 key "key-1"
+literal "true"
 
 \end_inset
 

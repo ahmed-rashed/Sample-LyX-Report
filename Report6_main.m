@@ -11,14 +11,14 @@ theta_d_vec=linspace(0,30);
 
 M_1_vec=1.5:.5:4.5;
 
-yAxesTitles_tex={'M_{2}','T_{2}/T_{1}','p_{2}/p_{1}','\rho_{2}/\rho_{1}'};
+yAxesTitles_tex=["M_{2}","T_{2}/T_{1}","p_{2}/p_{1}","\rho_{2}/\rho_{1}"];
 for ii=1:length(yAxesTitles_tex)
     subplot(length(yAxesTitles_tex),1,ii);
     hold on;
     grid;
     if ii~=length(yAxesTitles_tex), set(gca,'XTickLabel',[]);end
     
-    ylabel(['$',yAxesTitles_tex{ii},'$'],'interpreter','latex');
+    ylabel('$'+yAxesTitles_tex(ii)+'$','interpreter','latex');
 end
 xlabel('$\theta$ (degrees)','interpreter','latex'); %This applies to the bottom subplot
 
@@ -48,4 +48,4 @@ set(groot,'DefaultAxesColorOrder','remove')
 set(groot,'DefaultAxesLineStyleOrder','remove')
 set(groot,'DefaultLineLineWidth','remove');
 
-export_figure(gcf,'||',{'figures'},[],{'pdf','emf'})
+export_figure(gcf,'||',"figures",[],["pdf","emf"])
